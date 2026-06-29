@@ -1,0 +1,14 @@
+{
+  "name": "ocean-scrims-tickets",
+  "version": "1.0.0",
+  "description": "Ocean Scrims Discord Ticket Panel Manager",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "express": "^4.18.2",
+    "playwright": "^1.61.1"
+  }
+}
