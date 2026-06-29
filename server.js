@@ -265,7 +265,17 @@ app.listen(9500, () => {
   console.log('\n  🌊  Ocean Scrims Ticket Manager');
   console.log('  ────────────────────────────────');
   console.log('  ✅  Running at http://localhost:9500\n');
-});
+
+  const express = require('express');
+const path = require('path');
+
+const app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get("/", (req, res) => {
-  res.send("Server is working");
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
+const PORT = process.env.PORT || 9500;
+app.listen(PORT, () => console.log("Running"));
